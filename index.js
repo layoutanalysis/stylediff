@@ -6,6 +6,14 @@ var fs = require('fs');
 
 function dumpJaccarcCSV(jsonlinesFile, options, cb){
     var parser = jsonlines.parse({ emitInvalidLines: true });
+    var csvOptions = {header: true};
+    if (options.columns){
+        var cols = options.columns.split(',');
+        cols.unshift("url");
+        csvOptions.columns = cols;
+    }
+
+
     var parsedRows = [];
     parser.on('data', function (data) {
         data.properties.url = data.url;
@@ -31,7 +39,7 @@ function dumpJaccarcCSV(jsonlinesFile, options, cb){
             }
         });
         jaccardRows.shift(); //remove first entry because we have no previousRow to compare
-       csv_stringify(jaccardRows, {header: true}, function(err, data){
+       csv_stringify(jaccardRows, csvOptions, function(err, data){
             console.log(data);
         });
     });

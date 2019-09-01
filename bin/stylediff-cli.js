@@ -10,9 +10,10 @@ program
   .description("compare the similarity of two or more styledump'ed webpages and output them as CSV")
   .usage('[options] <jsonfile>')
     .option('-r, --round-pixels', 'round pixel values before comparison (11.775 px -> 12px)')
+    .option('-c, --columns <columnlist>', 'comma-separated list of written CSV columns (default: all)')
   .action(function(jsonfile, options) {
     if(jsonfile.length > 0) {
-      dumpJaccarcCSV(jsonfile, {"exclude": []}, function (csv){
+      dumpJaccarcCSV(jsonfile, options, function (csv){
         console.log(csv);
       });
     }
