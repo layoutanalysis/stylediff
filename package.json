@@ -1,13 +1,13 @@
 {
-  "name": "jaccard2csv",
+  "name": "stylediff",
   "version": "0.0.1",
-  "description": "pairwise calculation of the jaccard distance between JSON objects",
+  "description": "compare the similarity of two or more styledump'ed webpages",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "bin": {
-    "jaccard2csv": "./bin/jaccard-cli.js"
+    "stylediff": "./bin/stylediff-cli.js"
   },
   "author": "Franz Buchinger",
   "license": "ISC",

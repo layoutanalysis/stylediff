@@ -5,13 +5,11 @@ var program = require('commander');
 var dumpJaccarcCSV = require('..');
 
 
-//jaccard2csv --exclude "url" <jsonfile>
 program
   .version('1.0.0')
-  .description('calculates the jaccard distance for the objects in the jsonl file and outputs them as csv')
+  .description("compare the similarity of two or more styledump'ed webpages and output them as CSV")
   .usage('[options] <jsonfile>')
-    .option("-i, --input", "path to the .jsonl file")
-    .option("-e, --exclude", "comma-separated list of attributes that should be excluded from the calculation")
+    .option('-r, --round-pixels', 'round pixel values before comparison (11.775 px -> 12px)')
   .action(function(jsonfile, options) {
     if(jsonfile.length > 0) {
       dumpJaccarcCSV(jsonfile, {"exclude": []}, function (csv){

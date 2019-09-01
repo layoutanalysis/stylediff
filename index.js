@@ -23,8 +23,8 @@ function dumpJaccarcCSV(jsonlinesFile, options, cb){
                         jaccardValues[prop] = jaccard.index(previousRow[prop],row[prop]);
                     }
                 });
-                jaccardValues['url'] = row.url; //TODO: make this configurable
-                return jaccardValues
+                jaccardValues['url'] = row.url;
+                return jaccardValues;
             }
             else {
                 return {};
