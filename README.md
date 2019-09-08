@@ -1,13 +1,12 @@
-# stylediff
-stylediff was written to do quick similarity comparisons between a series of [styledump](https://github.com/layoutanalysis/styledump) outputs.
+# styledump-diff
+styledump-diff was written to do quick similarity comparisons between a series of [styledump](https://github.com/layoutanalysis/styledump) outputs.
 It calculates the [Jaccard index](https://en.wikipedia.org/wiki/Jaccard_index) between two neighboring objects in a [JSONLines](http://jsonlines.org/) file and output it as CSV. 
-
 
 
 ## Installation
 
 ```
-npm install -g layoutanalysis/stylediff
+npm install -g styledump-diff
 ```
 
 ## Usage (Command line)
@@ -24,6 +23,7 @@ Then invoke stylediff to generate a CSV file that compares the style attributes 
 ```
 stylediff --columns "font-family,color,line-height,background" "example.com.jsonl"
 ```
+(NOTE: stylediff is the executable program provided by the styledump-diff package)
 
 example output: 
 ```
