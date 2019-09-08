@@ -32,7 +32,7 @@ http://web.archive.org/web/20091231215808/http://www.example.com/,http://web.arc
 http://web.archive.org/web/20150101000457/http://www.example.com/,http://web.archive.org/web/20190901174525/https://example.com/,1,1,1,1,1
 ```
 ## Command Line Interface
-
+```
 Usage: stylediff [options] <jsonlfile>
 
 compare the similarity of two or more styledump'ed webpages and output them as CSV
@@ -42,6 +42,7 @@ Options:
   -r, --reduce                reduce CSS property values by removing dead values, alternate font-families and fractional digits for pixel values.
   -c, --columns <columnlist>  comma-separated list of CSS properties in the CSV output (default: all)
   -h, --help                  output usage information
+```
 
 The `-r` option tries to remove irrelevant (parts) of CSS property values before performing the comparison. Examples:
 
