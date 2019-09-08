@@ -47,9 +47,9 @@ The `-r` option tries to remove irrelevant (parts) of CSS property values before
 
 | Before Removal | After Removal | Description |
 | --- | --- |---|
-| "font-family":["Georgia, \"Times New Roman\", Times, serif","Arial", "Arial, sans-serif"] | "font-family":["Georgia","Arial"] | Fallback font families are rarely effective in the age of web fonts. By removing them, we get a more accurate number of the used font-families  |
-| "border":["0px solid #595959","1px solid #C8C8C8","none","0"] |  "border":["1px solid #C8C8C8"] | zero-pixel or "none" borders are not visible, so they shouldn't be counted as border style |
-| "margin-top": ["80px", "21.44px", "21px", "0px"] |"margin-top": ["80px", "21px", "0px"] | dimensions specified in units other than pixel sometimes lead to fractional digits, which have no relevance for the page display. |
+| `"font-family":["Georgia, \"Times New Roman\", Times, serif","Arial", "Arial, sans-serif"]` | `"font-family":["Georgia","Arial"]` | Fallback font families are rarely effective in the age of web fonts. By removing them, we get a more accurate number of the used font-families  |
+| `"border":["0px solid #595959","1px solid #C8C8C8","none","0"]` |  `"border":["1px solid #C8C8C8"]` | zero-pixel or "none" borders are not visible, so they shouldn't be counted as border style |
+| `"margin-top": ["80px", "21.44px", "21px", "0px"]` |`"margin-top": ["80px", "21px", "0px"]` | dimensions specified in units other than pixel sometimes lead to fractional digits, which have no relevance for the page display. |
 
 ## License
 
